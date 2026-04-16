@@ -8,7 +8,7 @@ router = APIRouter(
     tags=['Users']
 )
 
-@router.get("/", status_code=status.HTTP_201_CREATED, response_model=schemas.UserOut)
+@router.post("/", status_code=status.HTTP_201_CREATED, response_model=schemas.UserOut)
 def create_user(user:schemas.UserCreate, db: Session = Depends(get_db)):
     
     # Hash the user's password before saving it to the database
