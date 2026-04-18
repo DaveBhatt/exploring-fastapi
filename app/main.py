@@ -27,7 +27,7 @@ app.include_router(vote.router)
 
 @app.get("/")
 def root():
-    return {"message": "Welcome to the FastAPI application!"}
+    return {"message": "Welcome to the FastAPI application! This is the root endpoint."}
 
 
 
